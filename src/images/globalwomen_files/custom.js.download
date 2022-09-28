@@ -1,0 +1,234 @@
+// featurein carousel
+
+jQuery(document).ready( function(){
+$(".competition_carousel").owlCarousel({
+  dots: true,
+  nav: true,
+  loop: true,
+  margin: 30,
+    navText: [
+        '<img src="/wp-content/uploads/2021/10/Group-177.png">',
+
+        '<img src="/wp-content/uploads/2021/10/arrow.png">'
+  ],
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    768: {
+      items: 2
+    },
+    1000: {
+      items: 2
+    },
+    1440: {
+      items: 3
+    }
+  }
+})
+});
+
+jQuery(document).ready( function(){
+$(".videopage_carousel").owlCarousel({
+  dots: true,
+  nav: true,
+  loop: true,
+  margin: 30,
+    navText: [
+        '<img src="/wp-content/uploads/2021/10/Group-177.png">',
+
+        '<img src="/wp-content/uploads/2021/10/arrow.png">'
+  ],
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    768: {
+      items: 2
+    },
+    1000: {
+      items: 2
+    },
+    1440: {
+      items: 3
+    }
+  }
+})
+	
+
+$(".featuredin_carousel").owlCarousel({
+  dots: false,
+  nav: true,
+  loop: true,
+  margin: 50,
+  navText: [
+        '<img src="/wp-content/uploads/2021/10/Group-177.png">',
+
+        '<img src="/wp-content/uploads/2021/10/arrow.png">'
+  ],
+  autoplay: true,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    768: {
+      items: 2
+    },
+    1000: {
+      items: 2
+    },
+    1440: {
+      items: 3
+    }
+  }
+})
+	
+$(".single_videocrousel").owlCarousel({
+  dots: true,
+  nav: true,
+  loop: true,
+  margin: 50,
+  navText: [
+        '<img src="/wp-content/uploads/2021/10/Group-177.png">',
+
+        '<img src="/wp-content/uploads/2021/10/arrow.png">'
+  ],
+  autoplay: true,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 2
+    },
+    1440: {
+      items: 2
+    }
+  }
+})	
+
+$(".podcast_carousel").owlCarousel({
+  dots: true,
+  nav: true,
+  loop: true,
+  margin: 50,
+  navText: [
+        '<img src="/wp-content/uploads/2021/10/Group-177.png">',
+
+        '<img src="/wp-content/uploads/2021/10/arrow.png">'
+  ],
+  autoplay: true,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 2
+    },
+    1440: {
+      items: 3
+    }
+  }
+})	
+	
+
+$(".featuredin_testimonial").owlCarousel({
+  stopOnHover : true,
+  autoHeight : true,
+  dots: false,
+  nav: true,
+  loop: true,
+  margin: 50,
+  navText: [
+        '<img src="/wp-content/uploads/2021/10/Group-177.png">',
+
+        '<img src="/wp-content/uploads/2021/10/arrow.png">'
+  ],
+  autoplay: true,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 1
+    },
+    1440: {
+      items: 1
+    }
+  }
+})
+
+
+$(".product_testimonial").owlCarousel({
+  dots: false,
+  nav: true,
+  loop: true,
+  margin: 50,
+  navText: [
+        '<img src="/wp-content/uploads/2021/10/Group-177.png">',
+
+        '<img src="/wp-content/uploads/2021/10/arrow.png">'
+  ],
+  autoplay: true,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 2
+    },
+    1440: {
+      items: 2
+    }
+  }
+})
+});
+
+
+var is_playing = false;
+
+function onPlayerReady(event) {
+  var playButton = document.getElementByClass("ytp-large-play-button");
+  var that = this;
+  playButton.addEventListener("click", function(click_event) {
+    if (that.is_playing) {
+        player.pauseVideo();    
+    }else {
+        player.playVideo();
+    }
+  });
+}
+
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    this.is_playing = true;
+  }
+}
