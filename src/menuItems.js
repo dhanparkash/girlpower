@@ -12,7 +12,7 @@ export const menuItems = [
     url: '/contact-us',
   },
 
-  /***{
+  {
     title: 'Services',
     url: '/services',
     submenu: [
@@ -66,5 +66,5 @@ export const menuItems = [
   {
     title: 'Apply Now',
     url: '/apply-now',
-  },*////
+  },
 ];
